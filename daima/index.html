@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>甲方发个的个人网站</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="notification-bar">
+        <div class="notification-content">
+            <span class="notification-text">欢迎来到我的个人网站！</span>
+            <button class="notification-close">&times;</button>
+        </div>
+    </div>
+    <header>
+        <h1>张帅峰</h1>
+    </header>
+
+    <main>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/1.png" alt="照片1"></div>
+                <div class="swiper-slide"><img src="images/2.png" alt="照片2"></div>
+                <div class="swiper-slide"><img src="images/3.png" alt="照片3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </main>
+
+    <section class="about-me">
+        <div class="container">
+            <h2>个人简历</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="resume-section">
+                        <h3>基本信息</h3>
+                        <p>姓名：张帅峰</p>
+                        <p>学历：本科</p>
+                        <p>专业：计算机科学与技术</p>
+                        <div class="download-resume">
+                            <button class="preview-btn" onclick="openPreview()">
+                                <i class="fas fa-eye"></i> 预览简历
+                            </button>
+                            <button class="download-btn" onclick="downloadResume()">
+                                <i class="fas fa-download"></i> 下载简历
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="resume-section">
+                        <h3>专业技能</h3>
+                        <ul>
+                            <li>熟练掌握 HTML、CSS、JavaScript 等前端技术</li>
+                            <li>熟悉 Vue.js、React 等前端框架</li>
+                            <li>了解 Node.js 后端开发</li>
+                            <li>具备良好的团队协作能力</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="resume-section">
+                        <h3>工作经历</h3>
+                        <div class="experience">
+                            <h4>世界教育科技有限公司 - 前端开发工程师</h4>
+                            <p class="date">2020-2023</p>
+                            <ul>
+                                <li>负责公司主要产品的前端开发工作</li>
+                                <li>参与多个重要项目的技术方案设计</li>
+                                <li>主导前端技术架构的优化升级</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resume-section">
+                        <h3>教育背景</h3>
+                        <div class="experience">
+                            <h4>清华大学</h4>
+                            <p class="date">2019-2023</p>
+                            <ul>
+                                <li>专业：计算机科学与技术</li>
+                                <li>主修课程：数据结构、计算机网络、操作系统、数据库原理等</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resume-section">
+                        <h3>在校经历</h3>
+                        <div class="experience">
+                            <h4>校学生会 - 执行主席</h4>
+                            <p class="date">2020-2022</p>
+                            <ul>
+                                <li>负责学生会网站的开发和维护</li>
+                                <li>组织和参与多次技术交流活动</li>
+                                <li>获得优秀学生干部称号</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="experience">
+                            <h4>ACM程序设计竞赛</h4>
+                            <p class="date">2020-2021</p>
+                            <ul>
+                                <li>参加校级、省级程序设计竞赛</li>
+                                <li>获得校级竞赛二等奖</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI助手聊天区域 -->
+    <section class="chat-section">
+        <div class="container">
+            <h2>智能助手</h2>
+            <div class="chat-container">
+                <div class="chat-messages">
+                    <div class="message bot">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            你好！我是AI助手。我可以：
+                            1. 回答关于张帅峰的简历问题
+                            2. 提供更多职业经历细节
+                            3. 解答技术相关问题
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="输入你的问题..." id="userInput">
+                    <button id="sendMessage">发送</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://v.douyin.com/iDCX1rfW/" target="_blank">抖音</a>
+            <a href="https://v.kuaishou.com/8EFu8P" target="_blank">快手</a>
+            <a href="https://www.xiaohongshu.com/user/profile/6306d35600000000120028a2" target="_blank">小红书</a>
+        </div>
+    </footer>
+
+    <!-- 简历预览模态框 -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <iframe id="pdfPreview" src="" width="100%" height="100%"></iframe>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonwebtoken/9.0.0/jsonwebtoken.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
